@@ -132,7 +132,6 @@ Ensure you have the following installed:
        timestamp DATETIME NOT NULL
     );
   ```
-
   ```js
   const db = mysql.createConnection({
       host: 'localhost',
