@@ -28,7 +28,28 @@ The Speedometer Application is a full-stack solution that provides users with:
 - A user-friendly interface to visualize GPS speed data.
 - Backend services to store and manage speed data in a MySQL database.
 - Automatic deletion of old data for efficient database management.
+```sh
+unbox/
+├── speedometer/
+│   ├── src/
+│   │   └── components/
+│   │        └── Speedometer.js
+│   ├── App.js
+│   ├── index.css 
+│   ├──  index.js  
+│   ├── tailwind.config.js
+│   ├── Dockerfile
+│   └── firebase.json
+│
+├── public/
+│   └── index.html
+│
+│
+└──speedometer-backend/
+    ├── server.js
+    └── Dockerfile
 
+```
 Both components are containerized using Docker and available on Docker Hub for easy deployment.
 ![Concept map - Page 1 (1)](https://github.com/user-attachments/assets/2ccbe569-9c03-4774-a98a-4625c48db1a5)
 
@@ -53,6 +74,7 @@ Both components are containerized using Docker and available on Docker Hub for e
 
 - Prebuilt Docker images for both frontend and backend.
 - Easy-to-deploy containers for any environment.
+- Docker Hub Repository Link - https://hub.docker.com/repository/docker/saishchaskar/speedometer-unbox
 
 ---
 
@@ -223,7 +245,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Stay Connected
 
-For any queries or suggestions, feel free to open an issue or contact the repository maintainer.
+For any queries or suggestions, feel free to open an issue or contact.
 
 
 
