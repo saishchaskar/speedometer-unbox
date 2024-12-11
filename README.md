@@ -30,6 +30,7 @@ The Speedometer Application is a full-stack solution that provides users with:
 - Automatic deletion of old data for efficient database management.
 
 Both components are containerized using Docker and available on Docker Hub for easy deployment.
+![Concept map - Page 1 (1)](https://github.com/user-attachments/assets/2ccbe569-9c03-4774-a98a-4625c48db1a5)
 
 ---
 
