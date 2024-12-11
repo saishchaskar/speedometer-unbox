@@ -22,7 +22,9 @@ An interactive, full-stack Speedometer Application designed to monitor GPS speed
 ---
 
 ## Overview
+
 The Speedometer Application is a full-stack solution that provides users with:
+
 - A user-friendly interface to visualize GPS speed data.
 - Backend services to store and manage speed data in a MySQL database.
 - Automatic deletion of old data for efficient database management.
@@ -34,17 +36,20 @@ Both components are containerized using Docker and available on Docker Hub for e
 ## Features
 
 ### Frontend
+
 - Responsive React.js interface.
 - Displays real-time GPS speed data.
 - Designed for modern browsers and mobile devices.
 
 ### Backend
+
 - Node.js and Express API for handling GPS data.
 - Integration with MySQL for data storage.
 - Scheduled cleanup of outdated data.
 - Secure CORS-enabled access.
 
 ### Dockerized
+
 - Prebuilt Docker images for both frontend and backend.
 - Easy-to-deploy containers for any environment.
 
@@ -114,19 +119,30 @@ Ensure you have the following installed:
 #### Local Development:
 
 1. Install dependencies:
+
    ```sh
    npm install
    ```
-2. Configure the MySQL database in the backend code:
-   ```js
-   const db = mysql.createConnection({
-       host: 'localhost',
-       user: 'your_user',
-       password: 'your_password',
-       database: 'speed-db',
-   });
-   ```
-3. Start the backend server:
+
+2. Configure the MySQL database in the backend code and ensure the table schema matches the application's requirements:
+   ```sql
+   CREATE TABLE speed_data (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       speed_kph FLOAT NOT NULL,
+       timestamp DATETIME NOT NULL
+    );
+  ```
+
+  ```js
+  const db = mysql.createConnection({
+      host: 'localhost',
+      user: 'your_user',
+      password: 'your_password',
+      database: 'speed-db',
+  });
+  ```
+
+4. Start the backend server:
    ```sh
    node server.js
    ```
@@ -147,6 +163,7 @@ Both images are optimized for production use.
 ### Backend API
 
 - **POST /send-gps-speed**
+
   - Saves GPS speed data to the database.
   - Request Body:
     ```json
@@ -156,6 +173,7 @@ Both images are optimized for production use.
     ```
 
 - **GET /speed**
+
   - Retrieves the latest GPS speed data.
   - Response:
     ```json
@@ -179,6 +197,7 @@ Both images are optimized for production use.
 ## Contributing
 
 Contributions are welcome! To contribute:
+
 1. Fork this repository.
 2. Create a new branch:
    ```sh
@@ -205,4 +224,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ### Stay Connected
 
 For any queries or suggestions, feel free to open an issue or contact the repository maintainer.
+
+
 
