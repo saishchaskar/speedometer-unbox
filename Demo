@@ -1,0 +1,61 @@
+The errors indicate that some required dependencies are missing from your project. Here’s how you can resolve them:
+
+Steps to Fix
+	1.	Install Missing Dependencies:
+Run the following commands to install the required packages:
+
+npm install chartjs-adapter-date-fns
+npm install web-vitals
+
+
+	2.	Verify Installation:
+After installation, check if the packages are correctly added to your package.json file under dependencies.
+
+"dependencies": {
+  "chartjs-adapter-date-fns": "^2.0.0",  // Ensure this version or later is present
+  "web-vitals": "^3.0.0"                // Ensure this version or later is present
+}
+
+
+	3.	Clear Cache and Rebuild:
+If the issue persists, clear the npm cache and rebuild the project:
+
+npm cache clean --force
+npm install
+npm run start
+
+
+	4.	Check Import Statements:
+Ensure you are importing the packages correctly in your code:
+	•	For chartjs-adapter-date-fns:
+
+import 'chartjs-adapter-date-fns';
+
+
+	•	For web-vitals (in reportWebVitals.js):
+
+import { getCLS, getFID, getLCP } from 'web-vitals';
+
+
+	5.	Delete and Reinstall node_modules:
+If the above steps don’t work, delete the node_modules folder and reinstall all dependencies:
+
+rm -rf node_modules
+npm install
+npm run start
+
+Additional Tips
+	•	Ensure your Node.js and npm versions are up to date.
+
+node -v
+npm -v
+
+
+	•	If you continue to face issues, try deleting the package-lock.json file and reinstalling dependencies:
+
+rm package-lock.json
+npm install
+
+
+
+Let me know if this resolves your issue!
